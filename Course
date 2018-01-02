@@ -1,0 +1,30 @@
+Alogrithms:
+1. Bubble Sort
+2. 
+
++ In place sorting algorithm:
+	1. An in place algorithm doesn't need extra memory: Quicksort.
+	2. An algorith not in place will need extra memory: Mergesort.
+
++ Stable Algorithms:
+	1. The items with the same value keep the same relative order.
+	    Example:
+	    	3 -4 10 5* 8 5** 16
+	    	-4 3 5* 5** 8 10 16 ---> both 5's kept the same relative order: it's an stable algorithm.
+	Merge sort is stable.
+	Quick sort is not.
+
+
++ Comparison based complexity algorithms:
+
+	1. O(log N!) is the worst case time complexity.
+	2. O(N log N) is the best case time complexity using Stirling Formula.
+
++ Non Comparison base algorithms:
+	1. Radix, Bucket.
+	2. O(N) best case time complexity.
+
++ Comparison based algorithms:
+	1. Bubble, Insertion, Selection, Quick, Merge.
+
+	

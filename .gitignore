@@ -1,0 +1,6 @@
+.DS_Store
+*.o
+*.blend1
+x/
+m/
+
