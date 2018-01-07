@@ -1,0 +1,550 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"file",
+				"filesystem"
+			],
+			[
+				"Sor",
+				"Sort"
+			],
+			[
+				"data",
+				"dataString"
+			],
+			[
+				"Delimiter",
+				"DelimiterGroupV"
+			],
+			[
+				"rDe",
+				"rDelimiter"
+			],
+			[
+				"Delmi",
+				"Delimiter"
+			],
+			[
+				"Delmiter",
+				"DelimiterEnd"
+			],
+			[
+				"Del",
+				"DelimiterStartP"
+			],
+			[
+				"Delimi",
+				"DelimiterEnd"
+			],
+			[
+				"Delm",
+				"DelimiterStart"
+			],
+			[
+				"LIB",
+				"LIBDIR"
+			],
+			[
+				"R",
+				"ROOT_DIR"
+			],
+			[
+				"m_sep",
+				"m_sep_data"
+			],
+			[
+				"ppro",
+				"pprogram"
+			],
+			[
+				"gre",
+				"greatherthansorted"
+			],
+			[
+				"les",
+				"lessthansorted"
+			],
+			[
+				"grea",
+				"greatherthan"
+			],
+			[
+				"less",
+				"lessthan"
+			],
+			[
+				"me",
+				"membank"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/julianguarin/Code/hack/c++/sort/bubble/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 2063,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/julianguarin/Code/hack/c++/sort/bubble/bubble.cpp",
+			"settings":
+			{
+				"buffer_size": 1455,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 2061,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "genr.cpp",
+			"settings":
+			{
+				"buffer_size": 1059,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nEasyClangComplete\n-----------------\n\n  A plugin for easy to use clang-based completions::\n  \n      ╔═╗┌─┐┌─┐┬ ┬  ╔═╗┬  ┌─┐┌┐┌┌─┐  ╔═╗┌─┐┌┬┐┌─┐┬  ┌─┐┌┬┐┌─┐\n      ║╣ ├─┤└─┐└┬┘  ║  │  ├─┤││││ ┬  ║  │ ││││├─┘│  ├┤  │ ├┤\n      ╚═╝┴ ┴└─┘ ┴   ╚═╝┴─┘┴ ┴┘└┘└─┘  ╚═╝└─┘┴ ┴┴  ┴─┘└─┘ ┴ └─┘\n  \n  Let't get started!\n  ==================\n  \n  You're just two simple steps away!\n  \n  1. Install clang\n  ----------------\n  \n  - **Ubuntu**        : ``sudo apt-get install clang``\n  - **OSX**           : ships `clang` by default. You are all set!\n  - **Windows**       : install the latest release from clang website.\n  - **Other Systems** : use your package manager or install from clang website.\n  - clang website: http://llvm.org/releases/download.html\n  \n  2. Configure your includes\n  --------------------------\n  \n  Using CMake?\n  ~~~~~~~~~~~~\n  \n  Plugin will run cmake on a proper ``CMakeLists.txt`` in your project folder and\n  will use information from it to complete your code out of the box.\n  \n  Have a compilation database?\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  \n  Plugin will search for a compilation database ``compile_commands.json`` in the\n  project folder and will load it to complete your code. If you want to specify a\n  custom path to a comilation database you can do it in settings::\n  \n      \"flags_sources\": [\n          {\"file\": \"compile_commands.json\", \"search_in\": \"<YOUR_PATH>\"},\n      ]\n  \n  None of the above?\n  ~~~~~~~~~~~~~~~~~~\n  \n  You will need a little bit of manual setup for now. Clang will automatically\n  search for headers in the folder that contains the file you are working on and\n  its parent. If you have a more sophisticated project you will need to help clang\n  just a little bit. There are three ways to do it.\n  \n  Pick **ANY** of the following:\n  \n  - Set include dirs in ``\"common_flags\"`` setting in ``User Settings``.\n  - Override ``\"common_flags\"`` setting in your project file, i.e. one that has\n    extension: ``*.sublime-project``. Just define the same setting in project\n    specific settings with either one of two prefixes: ``\"ecc_\"`` or\n    ``\"easy_clang_complete_\"`` to override a corresponding setting in your user\n    settings. See the project file in this repo for a working example. Minimal\n    example for clarity::\n  \n      {\n        \"settings\":\n        {\n          \"ecc_common_flags\": [\"-Isrc\", \"-I/usr/include\"],\n          \"easy_clang_complete_verbose\": true\n        }\n      }\n  \n  - It is recommended to use one of the above, but if you already have a file with\n    flags, you can add ``.clang_complete`` file to the root of your project\n    folder. This file adds additional flags to the ones defined with in\n    ``\"common_flags\"``. Example::\n  \n      -Isrc\n      -I/usr/include\n  \n  That's it! You're ready to use the plugin!\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  \n  More info here\n  ~~~~~~~~~~~~~~\n  \n  Get more info in a readme:\n  https://github.com/niosus/EasyClangComplete/blob/master/README.md\n  \n  Please see the default settings ``EasyClangComplete.sublime-settings``\n  shipped with the plugin for explanations and sane default values.\n  \n  Thanks!\n  =======\n  \n  💜 this plugin? Consider buying me a 🍵\n  https://github.com/niosus/EasyClangComplete#support-it\n",
+			"settings":
+			{
+				"buffer_size": 3276,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "/Users/julianguarin/Code/hack/c++/sort/bogo/bogo.cpp",
+			"settings":
+			{
+				"buffer_size": 1743,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"toggle",
+				"Toggle Comment"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"COM",
+				"Toggle Comment"
+			],
+			[
+				"COMME",
+				"Toggle Block Comment"
+			],
+			[
+				"install ",
+				"Install Package Control"
+			],
+			[
+				"instal",
+				"Install Package Control"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/julianguarin/Code/hack/c++/sort/genr"
+	],
+	"file_history":
+	[
+		"/Users/julianguarin/Code/hack/c++/sort/bogo/.gitignore",
+		"/Users/julianguarin/Code/hack/c++/sort/bogo/bogo.cpp",
+		"/Users/julianguarin/Code/hack/c++/sort/bogo/CMakeLists.txt",
+		"/Users/julianguarin/Code/hack/c++/sort/bubble/CMakeLists.txt",
+		"/Users/julianguarin/Code/hack/c++/xml-octo-macaco/resources/monkey.dae",
+		"/Users/julianguarin/Code/hack/c++/xml-octo-macaco/document.h",
+		"/Users/julianguarin/Code/hack/c++/xml-octo-macaco/document.cpp",
+		"/Users/julianguarin/Code/hack/c++/sort/Course",
+		"/Users/julianguarin/Code/modern-opengl/.gitignore",
+		"/Users/julianguarin/Code/modern-opengl/src/MESHCOMPONENT/GMaterialComponent.h",
+		"/Users/julianguarin/Code/hack/c++/splitter/.gitignore",
+		"/Users/julianguarin/Code/hack/c++/aod/7/e7.cpp",
+		"/Users/julianguarin/Code/modern-opengl/sm/build_assimp/Makefile",
+		"/Users/julianguarin/Code/hack/c++/splitter/splitter.h",
+		"/Users/julianguarin/Code/hack/c++/aod/7/tower",
+		"/Users/julianguarin/Code/hack/c++/splitter/splitter.cpp",
+		"/Users/julianguarin/Code/hack/c++/aod/7/CMakeLists.txt",
+		"/Users/julianguarin/Code/modern-opengl/samples/gamepad/CMakeLists.txt",
+		"/Users/julianguarin/Code/hack/c++/aod/6/e6.cpp",
+		"/Users/julianguarin/.profile",
+		"/Users/julianguarin/Code/modern-opengl/src/MESHCOMPONENT/CMakeLists.txt",
+		"/Users/julianguarin/Code/hack/c++/splitter/CMakeLists.txt",
+		"/Users/julianguarin/Code/hack/c++/ex1/CMakeLists.txt",
+		"/Users/julianguarin/Code/hack/c++/ex1/ex1.cpp",
+		"/Users/julianguarin/Code/hack/c++/aod/4/e4.cpp",
+		"/Users/julianguarin/Code/hack/c++/aod/3/e3.cpp"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"vec",
+			"auto",
+			"atol(",
+			"atoi",
+			"index"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/julianguarin/Code/hack/c++/sort/bubble/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2063,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/julianguarin/Code/hack/c++/sort/bubble/bubble.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1331,
+								1331
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1109,
+								1109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "genr.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2330,
+								2466
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "/Users/julianguarin/Code/hack/c++/sort/bogo/bogo.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 637.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "genr.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 257.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
