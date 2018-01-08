@@ -22,7 +22,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 #DIRECTORIES
 get_filename_component(ROOT_DIR "." ABSOLUTE)
 set(LIB_DIR "${ROOT_DIR}/lib")
-set(INCLUDE_DIR "${ROOT_DIR}/include")
+set(INCLUDE_DIR "${ROOT_DIR}/..")
 message(STATUS "SYSTEM NAME: ${CMAKE_SYSTEM_NAME}")
 message(STATUS "ROOT_DIR: ${ROOT_DIR}")
 message(STATUS "LIB DIR: ${LIB_DIR}")
