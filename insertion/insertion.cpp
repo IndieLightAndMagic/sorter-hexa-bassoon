@@ -29,32 +29,32 @@ public:
 			cout << *it << (it + 1 == u.end() ? "\n" : " .. ");
 		}
 	}
+	static bool IsSortedSequel(const vector<T>&u, long index0, long index1)
+	{
+		return u[index0] <= u[index1];
+	}
 };
 
 template <typename T>
-class SelectionSorter : public Sorter<T>
+class InsertionSorter : public Sorter<T>
 {
 	void TraverseAndCompare(vector<T>& u, long size, long pivot)
 	{
 		auto data = u.data();
-		for (auto index = pivot + 1; index < size ; ++index)
+		for (auto index = pivot; index > 0 && this->IsSortedSequel(u,index-1,index); --index)
         {
-        	if (data[index] < data[pivot])
-        	{
-        		//Some implementations exchange the indexes 
-        		swap(data[index], data[pivot]);
-        	}
-        	this->m_count++;
+        	swap(data[index-1], data[index]);
+        	 ++this->m_count;
         }
 	}
 public:
-	SelectionSorter():Sorter<T>(){
+	InsertionSorter():Sorter<T>(){
 	}
 
 	void Sort(vector<T>& u) override {
         this->ResetCounter();
         auto size = static_cast<long>(u.size());
-		for (auto pivot = 0; pivot < size - 1; ++pivot)
+        for (auto pivot = 1; pivot < size - 1; ++pivot)
 		{
 			this->Print(u);
 			this->TraverseAndCompare(u, size, pivot);
@@ -69,8 +69,8 @@ public:
 
 int main() 
 {
-	vector<int>data{100,56,10,5,4,2,1,1,-2,-3};
-	SelectionSorter<int>sorter;
+	vector<int>data{55,-2,34,10,0,2,-5,12};
+	InsertionSorter<int>sorter;
 	sorter.Sort(data);
 	return 0;
 }
