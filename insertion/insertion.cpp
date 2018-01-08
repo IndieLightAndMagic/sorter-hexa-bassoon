@@ -41,7 +41,7 @@ class InsertionSorter : public Sorter<T>
 	void TraverseAndCompare(vector<T>& u, long size, long pivot)
 	{
 		auto data = u.data();
-		for (auto index = pivot; index > 0 && this->IsSortedSequel(u,index-1,index); --index)
+		for (auto index = pivot; index > 0 && !this->IsSortedSequel(u,index-1,index); --index)
         {
         	swap(data[index-1], data[index]);
         	 ++this->m_count;
