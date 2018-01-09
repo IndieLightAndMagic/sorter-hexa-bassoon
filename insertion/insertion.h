@@ -1,3 +1,5 @@
+#ifndef __INSERTION_H__
+#define __INSERTION_H__
 #include <iostream>
 #include <vector>
 #include <sort/sort.h>
@@ -30,3 +32,4 @@ public:
         std::cout << "** " << this->m_count << " **\n";
 	}
 };
+#endif /* __INSERTION_H__ */

@@ -1,3 +1,5 @@
+#ifndef __SORT_H__
+#define __SORT_H__
 #include <iostream>
 #include <vector>
 
@@ -33,4 +35,9 @@ public:
 	{
 		return u[index0] <= u[index1];
 	}
+	unsigned long GetCount()
+	{
+		return this->m_count;
+	}
 };
+#endif /*__SORT_H__*/
