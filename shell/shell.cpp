@@ -5,7 +5,7 @@ using namespace std;
 int main() 
 {
 	vector<int>data{34, -3, 0, 2, 14, 8, -1, 24};
-	ShellSorter<int>sorter;
+	ShellSorter<int>sorter(2);
 	sorter.Sort(data);
 	return 0;
 }
