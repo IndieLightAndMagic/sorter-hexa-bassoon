@@ -12,7 +12,8 @@ public:
 	Sorter(){}
     void ResetCounter(){ m_count = 0; }
 	virtual void Sort(std::vector<T>&u) = 0;
-	virtual bool IsSorted(std::vector<T>u){
+	virtual bool IsSorted(const std::vector<T>&u){
+		if (u.size()<=1) return true;
 		for (auto it = u.begin(); it != u.end(); ++it)
 	
 		{
