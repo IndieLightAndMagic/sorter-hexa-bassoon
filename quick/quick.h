@@ -1,4 +1,4 @@
- #ifndef __QUICK_H__
+#ifndef __QUICK_H__
 #define __QUICK_H__
 #include <vector>
 #include <sort/sort.h>
