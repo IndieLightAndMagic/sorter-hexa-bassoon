@@ -4,7 +4,7 @@ using namespace std;
 
 int main() 
 {
-	vector<int>data{34, -3, 0, 2, 14, 8, -1, 24};
+	vector<int>data{23, 6, 4, -1, 0, 12, 8, 3, 1};
 	QuickSorter<int>sorter;
 	sorter.Sort(data);
 	return 0;
