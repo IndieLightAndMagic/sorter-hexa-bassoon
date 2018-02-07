@@ -1,4 +1,4 @@
-#include "quick.h"
+#include "merge.h"
 using namespace std; 
 
 

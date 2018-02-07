@@ -25,12 +25,14 @@ public:
 		return true;
 
 	}
-	virtual void Print(std::vector<T>u)
-	{	
-		for (auto it = u.begin(); it != u.end(); ++it)
+	virtual void Print(std::vector<T>u, int startIndex = 0, int endIndex = -1)
+	{
+        endIndex = (endIndex == -1) ? u.size() - 1 : endIndex;
+        for (int index = startIndex; index <= endIndex; ++index )
 		{
-			std::cout << *it << (it + 1 == u.end() ? "\n" : " .. ");
+			std::cout << u[index] << (index + 1 == u.size() ? "\n" : " .. ");
 		}
+        std::cout << "\n";
 	}
 	static bool IsSortedSequel(const std::vector<T>&u, long index0, long index1)
 	{

@@ -1,5 +1,6 @@
 #ifndef __MERGE_H__
 #define __MERGE_H__
+#include <iostream>
 #include <vector>
 #include <sort/sort.h>
 
@@ -8,67 +9,59 @@ template <typename T>
 class MergeSorter : public Sorter<T>
 {
     unsigned int m_pivotalIndex = 0;
-    void CompilePartitions(std::vector<T>& unorderedVector, std::vector<T>& lowerPartitionVector, std::vector<T>& higherPartitionVector){
-    
-        auto usize = unorderedVector.size();
-        auto pivotalValue = unorderedVector[m_pivotalIndex];
-        auto equalCount = 0;
-        
-        for(auto index = 0; index < usize; ++index){
-            if (index == m_pivotalIndex) continue;
-            if (unorderedVector[index] > pivotalValue){ higherPartitionVector.push_back(std::forward<T>(unorderedVector[index])); continue; }
-            if (unorderedVector[index] < pivotalValue){ lowerPartitionVector.push_back(std::forward<T>(unorderedVector[index])); continue; }
-            if (unorderedVector[index] == pivotalValue){ equalCount++; }
-        }
-        
-        unorderedVector.clear();
-        unorderedVector.push_back(pivotalValue);
-        while(equalCount--){ unorderedVector.push_back(pivotalValue); }
-    
-    }
-    void PrintPartitions(const std::vector<T>& lower, const std::vector<T>& pivot, const std::vector<T>& higher, unsigned int depth = 0) {
+    void PrintPartitions(const std::vector<T>& u, unsigned int pivotIndex, unsigned int depth = 0) {
 
         while (depth--) std::cout << "    ";
-        for(auto e: lower) std::cout << " " << e;
-        std::cout << " -+- ";
-        for(auto e: pivot) std::cout << " " << e;
-        std::cout << " -+- ";
-        for(auto e: higher) std::cout << " " << e;
+        auto uSize = u.size();
+        for(auto index = 0; index < uSize ; ++index) std::cout << (index == pivotIndex ? " [" : " ") << u[index] << (index == pivotIndex ? "] " : "");
         std::cout << "\n";
         
     }
-    void MergePartitions(std::vector<T>& unorderedVector, std::vector<T>& lowerPartitionVector, std::vector<T>& higherPartitionVector) {
-        
-        auto it = unorderedVector.begin();
-        for(auto e: lowerPartitionVector) { unorderedVector.insert(it,e); ++it; }
-        for (auto e: higherPartitionVector) unorderedVector.push_back(e);
-        
-    }
-    void Partitionate(std::vector<T>& u, unsigned int depth = 0)
-	{
-		if (this->IsSorted(u)) return;
 
-		std::vector<T> lowerPartition;
-		std::vector<T> higherPartition;
+    void MergePartitions(std::vector<T>& u, unsigned int startIndex, unsigned int pivotIndex, unsigned int endIndex) {
+
+        auto indexLeft = startIndex;
+        auto indexRight = pivotIndex + 1;
         
-        CompilePartitions(u, lowerPartition, higherPartition);
-        this->PrintPartitions(lowerPartition, u, higherPartition, depth);
-		
-        Partitionate(lowerPartition, depth + 1);
-		Partitionate(higherPartition, depth + 1);
-        this->PrintPartitions(lowerPartition, u, higherPartition, depth);
+        std::vector<T> temp;
+        while (indexLeft <= pivotIndex && indexRight <= endIndex) {
+            
+            if (u[indexLeft] <= u[indexRight]) temp.push_back(u[indexLeft++]);
+            else temp.push_back(u[indexRight++]);
+            
+            if (indexLeft > pivotIndex) while (indexRight <= endIndex) temp.push_back(u[indexRight++]);
+            else if (indexRight > endIndex) while (indexLeft <= pivotIndex) temp.push_back(u[indexLeft++]);            
+        }
         
-        MergePartitions(u, lowerPartition, higherPartition);
-		
-        for (auto index = 0; index < depth; ++index) std::cout << "    "; std::cout << "U : "; this->Print(u);
+        auto tempSz = temp.size();
+        for (unsigned int index = 0; index < tempSz; ++index) u[startIndex + index] = temp[index];
+
+    }
+
+    void Partitionate(std::vector<T>& u, unsigned int startIndex, unsigned int endIndex, unsigned int depth = 0) {
+        this->Print(u,startIndex, endIndex);
+        if (endIndex - startIndex == 1)
+        {
+            if (u[startIndex] > u[endIndex]) std::swap(u[startIndex], u[endIndex]);
+            return;
+        }
+        unsigned int pivotIndex = startIndex + endIndex;
+        pivotIndex >>= 1;
+
+        Partitionate(u, startIndex, pivotIndex, depth + 1);
+		Partitionate(u, pivotIndex + 1, endIndex, depth + 1);
         
-	}
+        this->PrintPartitions(u, pivotIndex, depth);
+        MergePartitions(u, startIndex, pivotIndex, endIndex);
+        
+        
+	
+    }
 public:
     MergeSorter():m_pivotalIndex(0){}
 	void Sort(std::vector<T>& u)
 	{
-        
-		Partitionate(u);
+		Partitionate(u, 0, u.size() - 1);
 	}
     void setPivotalIndex(unsigned int pivotalIndex)
     {
