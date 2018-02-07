@@ -6,8 +6,7 @@
 
 template <typename T>
 
-class MergeSorter : public Sorter<T>
-{
+class MergeSorter : public Sorter<T> {
     unsigned int m_pivotalIndex = 0;
     void PrintPartitions(const std::vector<T>& u, unsigned int pivotIndex, unsigned int depth = 0) {
 
