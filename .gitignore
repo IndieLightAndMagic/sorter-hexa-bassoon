@@ -3,4 +3,5 @@
 *.blend1
 x/
 m/
-
+.idea/
+cmake-build-debug/
